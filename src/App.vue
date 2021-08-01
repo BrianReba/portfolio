@@ -9,12 +9,16 @@
   <button @click="restar">
     Restar
   </button>
+  <input v-model="multiplo">
+  <button @click="multiplicar">
+    multiplicar
+  </button>
+  
 <h2>
   {{cantidad}}
 </h2>
 </div>
 </template>
-
 <script>
 
 
@@ -22,8 +26,11 @@ export default {
   name: 'App',
   data() {
   return {
-    cantidad: 0
+    cantidad: 0,
+    multiplo: 10
+
   }
+
   },
   methods: {
     sumar(){
@@ -31,6 +38,9 @@ export default {
     },
     restar(){
       this.cantidad= this.cantidad-1
+    },
+    multiplicar(){
+      this.cantidad= this.cantidad * this.multiplo
     }
   }
 }
