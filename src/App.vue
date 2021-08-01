@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div>
+  <h1>
+    Portfolio
+  </h1>
+  <button @click="sumar">  
+    Sumar
+  </button>
+  <button @click="restar">
+    Restar
+  </button>
+<h2>
+  {{cantidad}}
+</h2>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+  return {
+    cantidad: 0
+  }
+  },
+  methods: {
+    sumar(){
+      this.cantidad= this.cantidad+1
+    },
+    restar(){
+      this.cantidad= this.cantidad-1
+    }
   }
 }
+  
+
+  
+  
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
