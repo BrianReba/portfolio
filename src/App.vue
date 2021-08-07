@@ -6,16 +6,18 @@
   <button @click="sumar">  
     Sumar
   </button>
+  <input v-model="sumatoria" >
   <button @click="restar">
     Restar
   </button>
-  <input v-model="multiplo">
+  <input v-model="restatoria" >
+  
   <button @click="multiplicar">
     multiplicar
   </button>
-  
+  <input v-model="multiplo">
 <h2>
-  {{cantidad}}
+  {{total}}
 </h2>
 </div>
 </template>
@@ -26,24 +28,26 @@ export default {
   name: 'App',
   data() {
   return {
-    cantidad: 0,
-    multiplo: 10
-
+    total: 0,
+    multiplo: 0,
+    sumatoria: 0,
+    restatoria: 0
   }
 
   },
   methods: {
     sumar(){
-      this.cantidad= this.cantidad+1
+      this.total= this.total + parseInt(this.sumatoria) 
     },
     restar(){
-      this.cantidad= this.cantidad-1
+      this.total= this.total - parseInt(this.restatoria)
     },
     multiplicar(){
-      this.cantidad= this.cantidad * this.multiplo
+      this.total= this.total * this.multiplo
     }
-  }
+  } 
 }
+
   
 
   
