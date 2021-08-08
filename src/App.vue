@@ -1,20 +1,22 @@
 <template>
   <div class="app">
-    <Calculadora titulo="Hola reba"> </Calculadora>
-    <Calculadora titulo="Hola july"> </Calculadora>
+    <NavBar></NavBar>
   </div>
 </template>
 
 <script>
-import Calculadora from '@/components/Calculadora.vue'
+import NavBar from '@/components/NavBar'
 export default {
   name: 'App',
   components: {
-    Calculadora
+    NavBar
   }
 }
 </script>
 
 <style>
-
+html, body {
+  margin: 0px !important;
+  padding: 0px !important;
+}
 </style>
