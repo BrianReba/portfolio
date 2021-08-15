@@ -1,9 +1,9 @@
 <template>
 	<div class="sidebar">
-		<button class="">Home</button>
-		<button >News</button>
-		<button>Contact</button>
-		<button>About</button>
+		<button  @click="() => redirect('Home')" class="">Home</button>
+		<button>Portfolio</button>
+		<button>Resume</button>
+		<button @click="() => redirect('Contact')" >Contact</button>
 	</div>
 </template>
 
@@ -11,19 +11,24 @@
 export default {
   name: 'NavBar',
   data () {
-      return {
-      }
+    return {
+    }
+  },
+  methods: {
+    redirect (page) {
+      this.$router.push({ name: page })
+    }
   }
 }
 </script>
 
 <style scoped>
 .sidebar {
+  z-index: 0;
   margin: 0;
   padding: 0;
   width: 150px;
   background-color: #b3b3cc;
-  position: fixed;
   height: 100%;
   overflow: auto;
 }

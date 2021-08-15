@@ -1,6 +1,7 @@
 <template>
   <div class="app">
-    <SideBar></SideBar>
+    <SideBar class="side-bar"></SideBar>
+    <router-view/>
   </div>
 </template>
 
@@ -15,6 +16,11 @@ export default {
 </script>
 
 <style>
+.app {
+  display:flex;
+  height: 100vh;
+  width: 100vw;
+}
 html, body {
   margin: 0px !important;
   padding: 0px !important;
