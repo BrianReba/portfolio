@@ -1,9 +1,9 @@
 <template>
 	<div class="sidebar">
-		<button  @click="() => redirect('Home')" class="">Home</button>
-		<button>Portfolio</button>
-		<button>Resume</button>
-		<button @click="() => redirect('Contact')" >Contact</button>
+		<router-link :to="{ name: 'Home' }" class="button-redirect">Home</router-link>
+		<router-link :to="{ name: 'Portfolio' }" class="button-redirect" >Portfolio</router-link>
+		<router-link :to="{ name: 'Resume' }" class="button-redirect" >Resume</router-link>
+		<router-link :to="{ name: 'Contact' }" class="button-redirect" >Contact</router-link>
 	</div>
 </template>
 
@@ -33,8 +33,7 @@ export default {
   overflow: auto;
 }
 
-.sidebar button {
-	width: 100%;
+.sidebar .button-redirect {
 	background: none;
 	color: inherit;
 	border: none;
@@ -48,12 +47,12 @@ export default {
   text-decoration: none;
 }
  
-.sidebar button.active {
+.sidebar .button-redirect.active {
   background-color: #c8c8c8;
   color: white;
 }
 
-.sidebar button:hover:not(.active) {
+.sidebar .button-redirect:hover:not(.active) {
   background-color: #555;
   color: white;
 }
@@ -61,7 +60,7 @@ export default {
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
+  height: 100vh;
 }
 
 @media screen and (max-width: 700px) {
@@ -70,12 +69,12 @@ div.content {
     height: auto;
     position: relative;
   }
-  .sidebar button {float: left;}
+  .sidebar .button-redirect {float: left;}
   div.content {margin-left: 0;}
 }
 
 @media screen and (max-width: 400px) {
-  .sidebar button {
+  .sidebar .button-redirect {
     text-align: center;
     float: none;
   }
