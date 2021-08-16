@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-      <h2> Home office </h2>
+     <div class="title-container">
+       <h1> Home office </h1>
+     </div> 
+
   </div>
 </template>
 
@@ -14,4 +17,14 @@ export default {
 </script>
 
 <style>
+.title-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.home{
+  width: 100%;
+  
+}
 </style>

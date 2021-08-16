@@ -1,12 +1,18 @@
 <template>
 	<div class="sidebar">
-		<router-link :to="{ name: 'Home' }" class="button-redirect">Home</router-link>
-		<router-link :to="{ name: 'Portfolio' }" class="button-redirect" >Portfolio</router-link>
-		<router-link :to="{ name: 'Resume' }" class="button-redirect" >Resume</router-link>
-		<router-link :to="{ name: 'Contact' }" class="button-redirect" >Contact</router-link>
+    <div class="user-container">
+      <img class="my-pic" src="https://images-ext-2.discordapp.net/external/4lXzfCpv1Ylhcx7Lg-qAOkHSWVtvc62C6EXOSgTSP3E/https/cdn.icon-icons.com/icons2/2468/PNG/512/user_kids_avatar_user_profile_icon_149314.png?width=468&height=468" alt="image">
+      <p class="username">
+        Brian Rebagliati
+      </p>
+    </div>
+		<router-link :to="{ name: 'Home' }" class="button-redirect"> <font-awesome-icon class="sidebar-icon" icon="home" />Home</router-link>
+		<router-link :to="{ name: 'Portfolio' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="suitcase" />Portfolio</router-link>
+		<router-link :to="{ name: 'Resume' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="id-card" />Resume</router-link>
+		<router-link :to="{ name: 'Contact' }" class="contact button-redirect" > <font-awesome-icon class="sidebar-icon" icon="envelope-open-text" />Contact</router-link>
 	</div>
 </template>
-
+    
 <script>
 export default {
   name: 'NavBar',
@@ -28,25 +34,22 @@ export default {
   margin: 0;
   padding: 0;
   width: 150px;
-  background-color: #b3b3cc;
+  background-color: #44184d;
   height: 100%;
   overflow: auto;
 }
 
 .sidebar .button-redirect {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-  display: block;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
   color: white;
-  padding: 16px;
+  padding: 25px;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
- 
+
 .sidebar .button-redirect.active {
   background-color: #c8c8c8;
   color: white;
@@ -57,26 +60,30 @@ export default {
   color: white;
 }
 
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 100vh;
+.username {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 15px 0 15px 0 ;
 }
 
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar .button-redirect {float: left;}
-  div.content {margin-left: 0;}
+.user-container{
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
-@media screen and (max-width: 400px) {
-  .sidebar .button-redirect {
-    text-align: center;
-    float: none;
-  }
+.my-pic{
+  height: 100px;
+  width: 100px;
 }
+
+.sidebar-icon{
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
 </style>
