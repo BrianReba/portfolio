@@ -29,16 +29,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background-image: url("https://cdn.discordapp.com/attachments/871510880012099610/878775738503933963/5651978.png");
-  background-size: 100%;
+  
+
 }
 
 .title-color{
   font-family: Arial, sans-serif;
   font-size: 50px;
   background: rgb(186,118,244);
-  background: linear-gradient(90deg, rgba(186,118,244,1) 19%, rgba(136,59,169,1) 43%, rgba(73,13,88,1) 71%); 
+  background: linear-gradient(90deg, rgba(186,118,244,1) 20%, rgb(120, 52, 180) 60%, rgb(186,118,244,1) 80%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0px;
@@ -48,7 +47,7 @@ export default {
   font-family: Arial, sans-serif;
   font-size: 30px;
   background: rgb(186,118,244);
-  background: linear-gradient(270deg, rgba(186,118,244,1) 19%, rgba(136,59,169,1) 43%, rgba(73,13,88,1) 71%); 
+  background: linear-gradient(270deg, rgb(130, 62, 189) 19%, rgba(120, 52, 180) 43%, rgb(132, 62, 194) 71%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

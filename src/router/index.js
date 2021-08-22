@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Contact from "@/views/Contact.vue";
 import Portfolio from "@/views/Portfolio.vue";
 import Resume from "@/views/Resume.vue";
+import AboutMe from "@/views/AboutMe.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     component: Resume,
   },
 
+  {
+    path: "/aboutme",
+    name: "AboutMe",
+    component: AboutMe,
+  }
 ];
 
 const router = createRouter({
