@@ -18,10 +18,6 @@
 <script>
 export default {
   name: 'NavBar',
-  data () {
-    return {
-    }
-  },
   methods: {
     redirect (page) {
       this.$router.push({ name: page })
@@ -35,7 +31,7 @@ export default {
   z-index: 0;
   margin: 0;
   padding: 0;
-  width: 150px;
+  width: 140px;
   background-color: #44184d;
   height: 100%;
   overflow: auto;
@@ -45,7 +41,8 @@ export default {
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   color: white;
-  padding: 25px;
+  font-size: 0.9rem;
+  padding: 15px;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -64,7 +61,7 @@ export default {
 
 .username {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   text-align: center;
   margin: 15px 0 15px 0 ;
 }
@@ -84,7 +81,7 @@ export default {
 }
 
 .sidebar-icon{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 

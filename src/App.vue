@@ -1,7 +1,11 @@
 <template>
   <div class="app">
     <SideBar class="side-bar"></SideBar>
-    <router-view class="page"/>
+    <router-view v-slot="{ Component }" class="page">
+      <transition name="fade" mode="out-in"> 
+        <component :is="Component"> </component>
+      </transition>
+    </router-view>
   </div>
 </template>
 
@@ -39,7 +43,13 @@ html, body {
   width: 100%;
 }
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
-
+.fade-enter-active, .fade-leave-active {
+   transition: opacity 0.5s ease-out;
+}
 
 </style>
