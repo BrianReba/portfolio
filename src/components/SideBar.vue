@@ -6,22 +6,31 @@
         Brian Rebagliati
       </p>
     </div>
-		<router-link :to="{ name: 'Home' }" class="button-redirect"> <font-awesome-icon class="sidebar-icon" icon="home" />Home</router-link>
-    <router-link :to="{ name: 'AboutMe' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="user-circle" />About Me</router-link>
-		<router-link :to="{ name: 'Portfolio' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="suitcase" />Portfolio</router-link>
-		<router-link :to="{ name: 'Resume' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="id-card" />Resume</router-link>
-		<router-link :to="{ name: 'Contact' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="envelope-open-text" />Contact</router-link>
-
+		<router-link @click="active('home')" :to="{ name: 'Home' }" class="button-redirect"> <font-awesome-icon class="sidebar-icon" icon="home" />Home</router-link>
+    <router-link @click="active('aboutme')" :to="{ name: 'AboutMe' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="user-circle" />About Me</router-link>
+		<router-link @click="active('portfolio')" :to="{ name: 'Portfolio' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="suitcase" />Portfolio</router-link>
+		<router-link @click="active('resume')" :to="{ name: 'Resume' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="id-card" />Resume</router-link>
+		<router-link @click="active('contact')" :to="{ name: 'Contact' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="envelope-open-text" />Contact</router-link>
+   
 	</div>
 </template>
     
 <script>
 export default {
   name: 'NavBar',
+  data () {
+    return {
+      buttonActive: 'home'
+    }
+  },
   methods: {
     redirect (page) {
       this.$router.push({ name: page })
+    },
+    active (clicked) {
+      this.buttonActive = clicked
     }
+
   }
 }
 </script>
