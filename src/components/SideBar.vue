@@ -6,11 +6,11 @@
         Brian Rebagliati
       </p>
     </div>
-		<router-link @click="active('home')" :to="{ name: 'Home' }" class="button-redirect"> <font-awesome-icon class="sidebar-icon" icon="home" />Home</router-link>
-    <router-link @click="active('aboutme')" :to="{ name: 'AboutMe' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="user-circle" />About Me</router-link>
-		<router-link @click="active('portfolio')" :to="{ name: 'Portfolio' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="suitcase" />Portfolio</router-link>
-		<router-link @click="active('resume')" :to="{ name: 'Resume' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="id-card" />Resume</router-link>
-		<router-link @click="active('contact')" :to="{ name: 'Contact' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="envelope-open-text" />Contact</router-link>
+		<router-link :class="{ 'active': buttonActive === 'home' }" @click="active('home')" :to="{ name: 'Home' }" class="button-redirect"> <font-awesome-icon class="sidebar-icon" icon="home" />Home</router-link>
+    <router-link :class="{ 'active': buttonActive === 'aboutme' }" @click="active('aboutme')" :to="{ name: 'AboutMe' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="user-circle" />About Me</router-link>
+		<router-link :class="{ 'active': buttonActive === 'portfolio' }" @click="active('portfolio')" :to="{ name: 'Portfolio' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="suitcase" />Portfolio</router-link>
+		<router-link :class="{ 'active': buttonActive === 'resume' }" @click="active('resume')" :to="{ name: 'Resume' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="id-card" />Resume</router-link>
+		<router-link :class="{ 'active': buttonActive === 'contact' }" @click="active('contact')" :to="{ name: 'Contact' }" class="button-redirect" > <font-awesome-icon class="sidebar-icon" icon="envelope-open-text" />Contact</router-link>
    
 	</div>
 </template>
@@ -59,7 +59,7 @@ export default {
 }
 
 .sidebar .button-redirect.active {
-  background-color: #c8c8c8;
+  background-color: #555;
   color: white;
 }
 
