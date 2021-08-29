@@ -1,6 +1,5 @@
 <template>
   <div class="card">
-    <div class="deco-border"></div>
     <div class="header-container">
         <slot class="header" name="header"></slot>
     </div>
@@ -24,18 +23,11 @@ export default {
     display:flex;
 }
 .header-container {
-    width: 80%;
+    width: 100%;
     height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.deco-border {
-    margin-left: 30px;
-    height: 20%;
-    width:9%;
-    border-top: 3px solid orange;
-    border-left: 3px solid orange;
 }
 .header {
     width: 100%;
