@@ -3,6 +3,9 @@
     <div class="header-container">
         <slot class="header" name="header"></slot>
     </div>
+    <div class="body-container">
+        <slot class="body" name="body"></slot>      
+    </div>
   </div>
 </template>
 
@@ -21,6 +24,9 @@ export default {
     width: 100%;
     background-color: #333;
     display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
 }
 .header-container {
     width: 100%;
@@ -31,5 +37,9 @@ export default {
 }
 .header {
     width: 100%;
+}
+
+.body-container {
+    height: 100%;
 }
 </style>

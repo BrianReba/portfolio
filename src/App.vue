@@ -52,4 +52,8 @@ html, body {
    transition: opacity 0.5s ease-in;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
 </style>
